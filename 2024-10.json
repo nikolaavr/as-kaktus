@@ -1,0 +1,954 @@
+[
+  {
+    "file": "001.jpg",
+    "name": "Aloe erinacea",
+    "price": 2400,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "002.jpg",
+    "name": "Cereus marginatus",
+    "price": 500,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "003.jpg",
+    "name": "Crassula deceptor",
+    "price": 1200,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "004.jpg",
+    "name": "Crassula deceptor",
+    "price": 1200,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "005.jpg",
+    "name": "Mamm. matudae f. cristata",
+    "price": 1200,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "006.jpg",
+    "name": "Mamm. longimamma f. monstruosa",
+    "price": 1200,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "007.jpg",
+    "name": "Ech. rubispinus",
+    "price": 300,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "008.jpg",
+    "name": "Delosperma sphalmanthoides",
+    "price": 250,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "009.jpg",
+    "name": "Crassula sp. variegata",
+    "price": 200,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "010.jpg",
+    "name": "Crassula 'Budin hram'",
+    "price": 400,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "011.jpg",
+    "name": "Crassula pyramidalis",
+    "price": 400,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "012.jpg",
+    "name": "Crassula pyramidalis",
+    "price": 400,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "013.jpg",
+    "name": "Stenocereus pruinosus",
+    "price": 200,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "014.jpg",
+    "name": "Cotyledon undulata",
+    "price": 400,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "015.jpg",
+    "name": "Cotyledon undulata",
+    "price": 400,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "016.jpg",
+    "name": "Haworthia planifolia f. agavoides",
+    "price": 300,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "017.jpg",
+    "name": "Haworthia planifolia f. agavoides",
+    "price": 300,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "018.jpg",
+    "name": "Sedum Joyce Tulloch",
+    "price": 250,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "019.jpg",
+    "name": "Albuca spiralis",
+    "price": 2000,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "020.jpg",
+    "name": "Albuca spiralis",
+    "price": 1400,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "021.jpg",
+    "name": "Albuca spiralis",
+    "price": 600,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "022.jpg",
+    "name": "Albuca sp.",
+    "price": 250,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "023.jpg",
+    "name": "Neoporteria nidus",
+    "price": 1600,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "024.jpg",
+    "name": "Neoporteria nidus",
+    "price": 600,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "025.jpg",
+    "name": "Frailea castanea",
+    "price": 1200,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "026.jpg",
+    "name": "Frailea castanea",
+    "price": 1200,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "027.jpg",
+    "name": "Tephrocactus geometricus",
+    "price": 1200,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "028.jpg",
+    "name": "Tephrocactus geometricus",
+    "price": 1200,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "029.jpg",
+    "name": "Astrophytum hybrid Jasenna",
+    "price": 800,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "030.jpg",
+    "name": "Faucaria sp.",
+    "price": 300,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "031.jpg",
+    "name": "Faucaria sp.",
+    "price": 300,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "032.jpg",
+    "name": "Faucaria sp.",
+    "price": 400,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "033.jpg",
+    "name": "Faucaria sp.",
+    "price": 300,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "034.jpg",
+    "name": "Faucaria sp.",
+    "price": 400,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "035.jpg",
+    "name": "Euphorbia flanaganii f. cristata",
+    "price": 400,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "036.jpg",
+    "name": "Euphorbia flanaganii f. cristata",
+    "price": 400,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "037.jpg",
+    "name": "Euphorbia flanaganii f. cristata",
+    "price": 400,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "038.jpg",
+    "name": "Euphorbia susannae",
+    "price": 800,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "039.jpg",
+    "name": "Euphorbia susannae",
+    "price": 300,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "040.jpg",
+    "name": "Euphorbia horrida monstruosa",
+    "price": 1400,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "041.jpg",
+    "name": "Euphorbia horrida monstruosa",
+    "price": 500,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "042.jpg",
+    "name": "Euphorbia horrida monstruosa",
+    "price": 400,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "043.jpg",
+    "name": "Euphorbia handiensis",
+    "price": 400,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "044.jpg",
+    "name": "Euphorbia handiensis",
+    "price": 400,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "045.jpg",
+    "name": "Euphorbia horrida",
+    "price": 500,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "046.jpg",
+    "name": "Euphorbia horrida",
+    "price": 500,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "047.jpg",
+    "name": "Euphorbia obesa f. striata",
+    "price": 1000,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "048.jpg",
+    "name": "Euphorbia decaryi",
+    "price": 1600,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "049.jpg",
+    "name": "Euphorbia mammillaris f. variegata",
+    "price": 1200,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "050.jpg",
+    "name": "Euphorbia mammillaris f. variegata",
+    "price": 700,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "051.jpg",
+    "name": "Euphorbia phillipsioides",
+    "price": 1500,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "052.jpg",
+    "name": "Euphorbia tubiglans",
+    "price": 1200,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "053.jpg",
+    "name": "Euphorbia japonica",
+    "price": 300,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "054.jpg",
+    "name": "Euphorbia japonica",
+    "price": 300,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "055.jpg",
+    "name": "Euphorbia ammak f. variegata",
+    "price": 2200,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "056.jpg",
+    "name": "Neoporteria napina",
+    "price": 400,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "057.jpg",
+    "name": "Neoporteria napina",
+    "price": 400,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "058.jpg",
+    "name": "Neoporteria napina",
+    "price": 400,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "059.jpg",
+    "name": "Pachyphytum sp.",
+    "price": 400,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "060.jpg",
+    "name": "Mamm. microthele",
+    "price": 800,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "061.jpg",
+    "name": "Mamm. bocasana f. multilanata",
+    "price": 1000,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "062.jpg",
+    "name": "Thelocactus rinconensis",
+    "price": 2200,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "063.jpg",
+    "name": "Glottiphyllum oligocarpum",
+    "price": 1000,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "064.jpg",
+    "name": "Gymno. vatteri v. brevispinus",
+    "price": 700,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "065.jpg",
+    "name": "Avonia sp.",
+    "price": 200,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "066.jpg",
+    "name": "Astrophytum hybrid",
+    "price": 1200,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "067.jpg",
+    "name": "Uebelmania pectinifera",
+    "price": 3000,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "068.jpg",
+    "name": "Haworthia x Astroloba",
+    "price": 600,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "069.jpg",
+    "name": "Gastgeria sp. mini variegata",
+    "price": 200,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "070.jpg",
+    "name": "Aloe sp.",
+    "price": 700,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "071.jpg",
+    "name": "Aloe variegata",
+    "price": 300,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "072.jpg",
+    "name": "Agave victoriae-reginae 'Compacta'",
+    "price": 1000,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "073.jpg",
+    "name": "Agave lophantha quadricolor",
+    "price": 2200,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "074.jpg",
+    "name": "Agave isthmiensis f. marginata cv. Kabutoganii",
+    "price": 3500,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "075.jpg",
+    "name": "Agave marmorata papilio platanoides",
+    "price": 4500,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "076.jpg",
+    "name": "Agave pygmaea 'Dragon toes'",
+    "price": 2500,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "077.jpg",
+    "name": "Agave isthmensis 'ohi-raijin' variegate",
+    "price": 5000,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "078.jpg",
+    "name": "Echeveria agavoides f. variegata",
+    "price": 2200,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "079.jpg",
+    "name": "Echeveria mini bell variegata",
+    "price": 1200,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "080.jpg",
+    "name": "Myrtillocactus geometrizans fukurokuryuziboku",
+    "price": 2500,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "081.jpg",
+    "name": "Myrtillocactus geometrizans fukurokuryuziboku",
+    "price": 2500,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "082.jpg",
+    "name": "Myrtillocactus geometrizans fukurokuryuziboku",
+    "price": 1900,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "083.jpg",
+    "name": "Puna bonniae f. inermis",
+    "price": 2500,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "084.jpg",
+    "name": "Puna bonniae",
+    "price": 2500,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "085.jpg",
+    "name": "Monadenium stapelioides",
+    "price": 2200,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "086.jpg",
+    "name": "Monadenium ritchiei",
+    "price": 600,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "087.jpg",
+    "name": "Monadenium ritchiei",
+    "price": 600,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "088.jpg",
+    "name": "Crassula justus corderoy",
+    "price": 200,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "089.jpg",
+    "name": "Crassula perforata",
+    "price": 200,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "090.jpg",
+    "name": "Senecio cuneatus",
+    "price": 200,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "091.jpg",
+    "name": "Senecio haworthii",
+    "price": 250,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "092.jpg",
+    "name": "Astro. myriostigma f. variegata",
+    "price": 500,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "093.jpg",
+    "name": "Astro. myriostigma f. variegata",
+    "price": 600,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "094.jpg",
+    "name": "Gymuno. glaucum",
+    "price": 500,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "095.jpg",
+    "name": "Haworthia sp.",
+    "price": 500,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "096.jpg",
+    "name": "Haworthia sp.",
+    "price": 500,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "097.jpg",
+    "name": "Haworthia picta brown",
+    "price": 1500,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "098.jpg",
+    "name": "Haworthia picta white",
+    "price": 2000,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "099.jpg",
+    "name": "Haworthia hybrid",
+    "price": 1000,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "100.jpg",
+    "name": "Haworthia Emperor",
+    "price": 3000,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "101.jpg",
+    "name": "Haworthia limifolia f. lemon",
+    "price": 800,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "102.jpg",
+    "name": "Haworthia limifolia f. lemon",
+    "price": 800,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "103.jpg",
+    "name": "Kalanchoe sp.",
+    "price": 500,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "104.jpg",
+    "name": "Aeonium sp. variegata",
+    "price": 250,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "105.jpg",
+    "name": "Aeonium sp. variegata",
+    "price": 200,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "106.jpg",
+    "name": "Monvillea spegazzinii f. cristata",
+    "price": 500,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "107.jpg",
+    "name": "Monvillea spegazzinii f. cristata",
+    "price": 600,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "108.jpg",
+    "name": "Monvillea spegazzinii f. cristata",
+    "price": 600,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "109.jpg",
+    "name": "Cereus sp. f. monstuosa",
+    "price": 300,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "110.jpg",
+    "name": "Huernia hystrix",
+    "price": 600,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "111.jpg",
+    "name": "Puna incahuasi",
+    "price": 500,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "112.jpg",
+    "name": "Puna incahuasi",
+    "price": 500,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "113.jpg",
+    "name": "Mam. gracilis oruga",
+    "price": 400,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "114.jpg",
+    "name": "Cleistocactus sp. cristata",
+    "price": 300,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "115.jpg",
+    "name": "Cleistocactus samaipatanus f. cristata",
+    "price": 1000,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "116.jpg",
+    "name": "Cleistocactus stransii f. cristata",
+    "price": 2500,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "117.jpg",
+    "name": "Cleistocactus f. cristata",
+    "price": 1000,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "118.jpg",
+    "name": "Vatricania guentheri f. cristata",
+    "price": 1500,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "119.jpg",
+    "name": "Lobivia densispina f. cristata",
+    "price": 1500,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "120.jpg",
+    "name": "Lobivia densispina f. cristata",
+    "price": 1500,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "121.jpg",
+    "name": "Cereus f. cristata",
+    "price": 1000,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "122.jpg",
+    "name": "Parodia sp.",
+    "price": 800,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "123.jpg",
+    "name": "Mammilaria plumosa",
+    "price": 1000,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "124.jpg",
+    "name": "Mammilaria plumosa",
+    "price": 1000,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "125.jpg",
+    "name": "Lenophyllum guttatum variegata",
+    "price": 2200,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "126.jpg",
+    "name": "Crassula marnieriana",
+    "price": 400,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "127.jpg",
+    "name": "Epithelantha pachyrhisa",
+    "price": 800,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "128.jpg",
+    "name": "Albuca concordiana",
+    "price": 1500,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "129.jpg",
+    "name": "Haworthia maughanii Shirotae",
+    "price": 3000,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "130.jpg",
+    "name": "Crassula ovata Hobbit variegata",
+    "price": 800,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "131.jpg",
+    "name": "Echinocereus fendleri rectispinus",
+    "price": 400,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "132.jpg",
+    "name": "Dorstenia hildebrandtii",
+    "price": 1200,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "133.jpg",
+    "name": "Dorstenia foetida",
+    "price": 600,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "134.jpg",
+    "name": "Dorstenia foetida",
+    "price": 800,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "135.jpg",
+    "name": "Euphorbia mammilaris cristata",
+    "price": 400,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  },
+  {
+    "file": "136.jpg",
+    "name": "Hoodia gordoni",
+    "price": 1000,
+    "notes": "oktobar, 2024",
+    "folder": "images/Kaktusi prodajni album - 2024.10"
+  }
+]

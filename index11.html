@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Cactus Collection</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            background-color: #e8f5e9; /* Light Green/Mint background */
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        /* Container and Header */
+        .container {
+            width: 95%;
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 30px;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #388e3c; /* Darker Green for Title */
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        /* Search and Filter Area */
+        .controls {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        select, input[type="text"] {
+            width: 100%;
+            max-width: 400px;
+            padding: 12px 15px;
+            font-size: 16px;
+            border: 2px solid #a5d6a7; /* Light green border */
+            border-radius: 8px;
+            transition: border-color 0.3s, box-shadow 0.3s;
+            background-color: #f7fcf7;
+        }
+        
+        select:focus, input[type="text"]:focus {
+            border-color: #4caf50; /* Primary green focus */
+            box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+            outline: none;
+        }
+
+        /* Card Layout (Grid for masonry/pinterest style) */
+        #result {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        /* Individual Card Style */
+        .card {
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .card h3 {
+            color: #558b2f; /* Succulent Green */
+            margin-top: 0;
+            font-size: 1.2em;
+            min-height: 40px; /* Ensures consistent height for name */
+        }
+        
+        .card img {
+            width: 100%;
+            height: auto;
+            max-height: 200px; /* Fixed height for image area */
+            object-fit: cover; /* Ensures image covers the area without distortion */
+            border-radius: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #eee;
+        }
+        
+        .card p {
+            margin: 5px 0;
+            font-weight: bold;
+            color: #00796b; /* Teal for price */
+        }
+
+        .card .notes {
+            font-weight: normal;
+            font-size: 0.9em;
+            color: #757575; /* Grey for notes/details */
+        }
+
+        .not-found {
+            grid-column: 1 / -1; /* Center the message across the grid */
+            color: #d32f2f;
+            margin-top: 30px;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        /* Responsive adjustments */
+        @media (min-width: 768px) {
+            .controls {
+                flex-direction: row;
+                justify-content: center;
+            }
+            select, input[type="text"] {
+                width: 45%;
+                max-width: 350px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🌵 My Cactus & Succulent Collection</h1>
+
+        <div class="controls">
+            <select id="speciesDropdown">
+                <option value="">-- Filter by Genus --</option>
+            </select>
+            <input type="text" id="search" placeholder="Search by name (e.g., 'Astrophytum' or 'hibrid')...">
+        </div>
+        
+        <div id="result"></div>
+    </div>
+
+    <script>
+        let cacti = [];
+
+        // List of JSON files (one per folder) - KEEP THIS AS IS
+        // NOTE: In a real environment, these files must be in the same directory 
+        // as the HTML or the correct path must be used.
+        const jsonFiles = [
+            "2023-10.json", "2024-05.json", "2024-07.json", "2024-08.json", "2024-10.json", "2025-07.json", "2025-03.json"
+        ];
+
+        // Load all JSON files
+        Promise.all(jsonFiles.map(file => fetch(file).then(res => res.json())))
+            .then(allData => {
+                // Flatten arrays from multiple JSON files
+                cacti = allData.flat();
+                populateDropdown();
+                filterCacti(); // Display all on load
+            })
+            .catch(error => {
+                console.error("Error loading JSON files:", error);
+                document.getElementById('result').innerHTML = '<p class="not-found">Error loading data. Check console for details.</p>';
+            });
+
+        const resultDiv = document.getElementById('result');
+        const searchInput = document.getElementById('search');
+        const speciesDropdown = document.getElementById('speciesDropdown');
+
+        function populateDropdown() {
+            const speciesSet = new Set();
+            cacti.forEach(c => {
+                if (c.name) {
+                    // Get first word as genus (e.g., 'Mammilaria' from 'Mammilaria luethyi A')
+                    const genus = c.name.split(' ')[0]; 
+                    speciesSet.add(genus);
+                }
+            });
+
+            // Convert set to array and sort alphabetically
+            const sortedSpecies = Array.from(speciesSet).sort((a, b) => a.localeCompare(b));
+
+            sortedSpecies.forEach(species => {
+                const option = document.createElement('option');
+                option.value = species;
+                option.textContent = species;
+                speciesDropdown.appendChild(option);
+            });
+        }
+
+        function displayCacti(filteredCacti) {
+            resultDiv.innerHTML = '';
+            if (filteredCacti.length === 0) {
+                resultDiv.innerHTML = `<p class="not-found">❌ No matching cacti found</p>`;
+                return;
+            }
+
+            // Sort alphabetically by genus (first word in name)
+            filteredCacti.sort((a, b) => {
+                const getGenus = c => {
+                    if (!c.name) return '';
+                    return c.name.split(' ')[0].toLowerCase();
+                };
+                return getGenus(a).localeCompare(getGenus(b));
+            });
+
+            const fragment = document.createDocumentFragment();
+
+            filteredCacti.forEach(c => {
+                const name = c.name || 'Unknown Plant';
+                const price = c.price ? c.price.toLocaleString('sr-RS') + ',00 RSD' : 'Price N/A';
+                // Assuming 'notes' field is what you want to show for additional info
+                const notes = c.notes || c.id || ''; 
+                const folder = c.folder || 'unknown_folder';
+                const file = c.file || 'unknown_file.jpg'; // Assuming .jpg extension
+
+                const card = document.createElement('div');
+                card.className = 'card';
+                card.innerHTML = `
+                    <h3>${name}</h3>
+                    <img src="${folder}/${file}" alt="${name}">
+                    <p>Price: ${price}</p>
+                    <p class="notes">ID/Notes: ${notes}</p>
+                `;
+                fragment.appendChild(card);
+            });
+
+            resultDiv.appendChild(fragment);
+        }
+
+        // Event listeners with debounce for search
+        let debounceTimeout;
+
+        searchInput.addEventListener('input', () => {
+            clearTimeout(debounceTimeout);
+            debounceTimeout = setTimeout(filterCacti, 200); // Wait 200ms after last keystroke
+        });
+
+        speciesDropdown.addEventListener('change', filterCacti);
+
+        function filterCacti() {
+            const query = searchInput.value.toLowerCase().trim();
+            const selectedSpecies = speciesDropdown.value;
+
+            const filtered = cacti.filter(c => {
+                const plantName = c.name ? c.name.toLowerCase() : '';
+                
+                const nameMatch = plantName.includes(query);
+                
+                // Check if the first word (Genus) of the name matches the selected dropdown value
+                const genus = plantName.split(' ')[0];
+                const speciesMatch = selectedSpecies ? (genus === selectedSpecies.toLowerCase()) : true;
+                
+                return nameMatch && speciesMatch;
+            });
+
+            displayCacti(filtered);
+        }
+    </script>
+</body>
+</html>

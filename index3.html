@@ -1,0 +1,160 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🌵 My Cactus Collection</title>
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; background: #f3f3f3; }
+    .container { max-width: 800px; margin: 50px auto; padding: 20px; background: white; border-radius: 10px; }
+    input { width: 80%; padding: 10px; margin: 10px 0; font-size: 16px; }
+    .result { margin-top: 20px; }
+    .card {
+      display: inline-block;
+      width: 220px;
+      margin: 15px;
+      padding: 15px;
+      border-radius: 10px;
+      background: #fafafa;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      vertical-align: top;
+    }
+    .card img { max-width: 100%; border-radius: 10px; }
+    .not-found { color: red; margin-top: 20px; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🌵 My Cactus Collection</h1>
+    <input type="text" id="search" placeholder="Type cactus name...">
+    <div id="result"></div>
+  </div>
+
+  <script>
+    let cacti = [];
+
+    // Load combined JSON file with all cacti from multiple folders
+    fetch('cacti2.json')
+      .then(response => response.json())
+      .then(data => { cacti = data; });
+
+    const searchInput = document.getElementById("search");
+    const resultDiv = document.getElementById("result");
+
+    searchInput.addEventListener("input", () => {
+      const query = (searchInput.value || "").toLowerCase();
+      resultDiv.innerHTML = "";
+
+      if(query.length === 0) return;
+
+      const matches = cacti.filter(c => 
+        c.name && c.name.toLowerCase().includes(query)
+      );
+
+      if(matches.length === 0){
+        resultDiv.innerHTML = `<p class="not-found">❌ Not in collection</p>`;
+        return;
+      }
+
+      matches.forEach(cactus => {
+        const card = `
+          <div class="card">
+            <h3>${cactus.name || 'unknown'}</h3>
+            <img src="${cactus.folder || 'unknown'}/${cactus.file || 'unknown.jpg'}" alt="${cactus.name || 'unknown'}">
+            <p>${cactus.price != null ? cactus.price + ',00 RSD' : 'unknown'}</p>
+            <p class="notes">${cactus.notes || 'unknown'}</p>
+          </div>
+        `;
+        resultDiv.innerHTML += card;
+      });
+    });
+  </script>
+</body>
+</html>
+ -->
+
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Cactus Collection</title>
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; background: #f3f3f3; }
+    .container { max-width: 900px; margin: 50px auto; padding: 20px; background: white; border-radius: 10px; }
+    input { width: 80%; padding: 10px; margin: 10px 0; font-size: 16px; }
+    .result { margin-top: 20px; }
+    .card {
+      display: inline-block;
+      width: 220px;
+      margin: 15px;
+      padding: 15px;
+      border-radius: 10px;
+      background: #fafafa;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      vertical-align: top;
+    }
+    .card img { max-width: 100%; border-radius: 10px; }
+    .not-found { color: red; margin-top: 20px; font-weight: bold; }
+    .notes { font-size: 0.9em; color: #555; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🌵 My Cactus Collection</h1>
+    <input type="text" id="search" placeholder="Type cactus name...">
+    <div id="result"></div>
+  </div>
+
+  <script>
+    let cacti = [];
+
+    // Load all JSONs listed in index.json
+    fetch('index.json')
+      .then(res => res.json())
+      .then(indexData => {
+        return Promise.all(
+          indexData.files.map(file => fetch(file).then(r => r.json()))
+        );
+      })
+      .then(dataArrays => {
+        // Flatten all JSON arrays into one
+        cacti = dataArrays.flat();
+      })
+      .catch(err => console.error("Error loading JSON files:", err));
+
+    const searchInput = document.getElementById("search");
+    const resultDiv = document.getElementById("result");
+
+    searchInput.addEventListener("input", () => {
+      const query = (searchInput.value || "").toLowerCase();
+      resultDiv.innerHTML = "";
+
+      if (query.length > 0) {
+        const matches = cacti.filter(c => (c.name || "unknown").toLowerCase().includes(query));
+
+        if (matches.length > 0) {
+          matches.forEach(cactus => {
+            const folder = cactus.folder || "unknown";
+            const file = cactus.file || "unknown.jpg";
+            const name = cactus.name || "unknown";
+            const price = cactus.price ? cactus.price + ",00 RSD" : "unknown";
+            const notes = cactus.notes || "unknown";
+
+            const card = `
+              <div class="card">
+                <h3>${name}</h3>
+                <img src="${folder}/${file}" alt="${name}">
+                <p>${price}</p>
+                <p class="notes">${notes}</p>
+              </div>
+            `;
+            resultDiv.innerHTML += card;
+          });
+        } else {
+          resultDiv.innerHTML = `<p class="not-found">❌ Not in collection</p>`;
+        }
+      }
+    });
+  </script>
+</body>
+</html>

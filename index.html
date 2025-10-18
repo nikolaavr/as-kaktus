@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>My Cactus Collection</title>
+<style>
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    background-color: #e8f5e9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    width: 95%;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+h1 {
+    color: #388e3c;
+    font-size: 4em;
+    margin-bottom: 20px;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+select, input[type="text"] {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px 14px;
+    font-size: 16px;
+    border: 2px solid #a5d6a7;
+    border-radius: 8px;
+    background-color: #f7fcf7;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+select:focus, input[type="text"]:focus {
+    border-color: #4caf50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+    outline: none;
+}
+
+/* GRID kartice */
+#result {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* KARTICA */
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    border: 1px solid #e0e0e0;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+/* IME BILJKE */
+.card h3 {
+    color: #558b2f;
+    font-size: 2em;
+    margin: 0;
+    min-height: 3em; /* 3 reda */
+    display: flex;
+    align-items: center;  /* vertikalno centrira tekst */
+    justify-content: center; /* horizontalno centrira */
+    text-align: center;
+    line-height: 1.2em;
+    padding: 0 5px;
+}
+
+/* SLIKA */
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 8px 0;
+    border: 1px solid #eee;
+    cursor: pointer;
+    object-fit: contain; /* prikazuje celu sliku bez sečenja */
+    background-color: #fafafa;
+}
+
+/* FOOTER KARTICE (cena i datum/folder) */
+.card-footer {
+    display: flex;
+    flex-direction: column;
+    gap:  0px;
+    font-size: 1.5em;
+}
+
+/* PORUKE */
+.not-found {
+    grid-column: 1 / -1;
+    color: #d32f2f;
+    margin-top: 30px;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+/* Responsive: 2 kartice za telefone */
+@media (max-width: 1024px) {
+    #result {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 16px;
+    }
+}
+
+/* Mali telefoni: 1 kartica */
+@media (max-width: 500px) {
+    #result {
+        grid-template-columns: repeat(1, 1fr) !important;
+    }
+}
+
+@media (min-width: 1025px) {
+    .controls {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    select, input[type="text"] {
+        width: 30%;
+        max-width: 300px;
+    }
+}
+
+/* POPUP */
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+}
+
+.popup-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 80%;
+}
+
+.popup-close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.popup-close:hover {
+    color: #ccc;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>🌵 My Cactus & Succulent Collection</h1>
+
+<div class="controls">
+    <select id="speciesDropdown">
+        <option value="">-- Filter by Genus --</option>
+    </select>
+    <select id="folderDropdown">
+        <option value="">-- Filter by Album/Month --</option>
+    </select>
+    <input type="text" id="search" placeholder="Search by name (e.g., 'Astrophytum' or 'hybrid')...">
+</div>
+
+<div id="result"></div>
+</div>
+
+<!-- POPUP -->
+<div id="imagePopup" class="popup">
+    <span class="popup-close">&times;</span>
+    <img class="popup-content" id="popupImage">
+</div>
+
+<script>
+let cacti = [];
+const jsonFiles = [
+    "2023-10.json", "2024-05.json", "2024-07.json",
+    "2024-08.json", "2024-10.json", "2025-03.json", "2025-07.json"
+];
+
+Promise.all(jsonFiles.map(file => fetch(file).then(res => res.json())))
+.then(allData => {
+    cacti = allData.flat();
+    populateDropdowns();
+    filterCacti();
+})
+.catch(error => {
+    console.error("Error loading JSON files:", error);
+    document.getElementById('result').innerHTML =
+        '<p class="not-found">Error loading data.</p>';
+});
+
+const resultDiv = document.getElementById('result');
+const searchInput = document.getElementById('search');
+const speciesDropdown = document.getElementById('speciesDropdown');
+const folderDropdown = document.getElementById('folderDropdown');
+
+function populateDropdowns() {
+    const speciesSet = new Set();
+    const folderSet = new Set();
+    cacti.forEach(c => {
+        if (c.name) speciesSet.add(c.name.split(' ')[0]);
+        if (c.folder) folderSet.add(c.folder);
+    });
+    Array.from(speciesSet).sort().forEach(sp => {
+        const opt = document.createElement('option');
+        opt.value = sp;
+        opt.textContent = sp;
+        speciesDropdown.appendChild(opt);
+    });
+    Array.from(folderSet).sort().forEach(fd => {
+        const opt = document.createElement('option');
+        opt.value = fd;
+        opt.textContent = fd.replace('images/', '').replace(/Kaktusi prodajni album - /, '');
+        folderDropdown.appendChild(opt);
+    });
+}
+
+function displayCacti(filteredCacti) {
+    resultDiv.innerHTML = '';
+    if (filteredCacti.length === 0) {
+        resultDiv.innerHTML = `<p class="not-found">❌ No matching cacti found</p>`;
+        return;
+    }
+
+    filteredCacti.sort((a,b)=>(a.name||'').localeCompare(b.name||''));
+    const fragment = document.createDocumentFragment();
+    filteredCacti.forEach(c => {
+        const name = c.name || 'Unknown Plant';
+        const price = c.price ? c.price.toLocaleString('sr-RS') + ',00 RSD' : 'Price N/A';
+        const notes = c.notes || c.id || '';
+        const folder = c.folder || 'unknown_folder';
+        const file = c.file || 'unknown_file.jpg';
+
+        const card = document.createElement('div');
+        card.className = 'card';
+        card.innerHTML = `
+            <h3>${name}</h3>
+            <img src="${folder}/${file}" alt="${name}">
+            <div class="card-footer">
+                <p>Price: ${price}</p>
+                <p class="notes">${notes}</p>
+            </div>
+        `;
+        fragment.appendChild(card);
+    });
+    resultDiv.appendChild(fragment);
+    attachPopupListeners();
+}
+
+function attachPopupListeners() {
+    const popup = document.getElementById('imagePopup');
+    const popupImg = document.getElementById('popupImage');
+    const closeBtn = document.querySelector('.popup-close');
+
+    document.querySelectorAll('.card img').forEach(img => {
+        img.addEventListener('click', () => {
+            popup.style.display = 'block';
+            popupImg.src = img.src;
+        });
+    });
+
+    closeBtn.onclick = () => popup.style.display = 'none';
+    popup.onclick = e => { if (e.target === popup) popup.style.display = 'none'; };
+}
+
+let debounceTimeout;
+searchInput.addEventListener('input', () => {
+    clearTimeout(debounceTimeout);
+    debounceTimeout = setTimeout(filterCacti, 200);
+});
+speciesDropdown.addEventListener('change', filterCacti);
+folderDropdown.addEventListener('change', filterCacti);
+
+function filterCacti() {
+    const query = searchInput.value.toLowerCase().trim();
+    const selectedSpecies = speciesDropdown.value.toLowerCase();
+    const selectedFolder = folderDropdown.value.toLowerCase();
+
+    const filtered = cacti.filter(c => {
+        const name = c.name?.toLowerCase() || '';
+        const genus = name.split(' ')[0];
+        const folder = c.folder?.toLowerCase() || '';
+        const nameMatch = name.includes(query);
+        const speciesMatch = selectedSpecies ? genus === selectedSpecies : true;
+        const folderMatch = selectedFolder ? folder.includes(selectedFolder) : true;
+        return nameMatch && speciesMatch && folderMatch;
+    });
+
+    displayCacti(filtered);
+}
+</script>
+</body>
+</html>
