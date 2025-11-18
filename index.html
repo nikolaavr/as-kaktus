@@ -252,7 +252,7 @@ function populateDropdowns() {
     Array.from(folderSet).sort().forEach(fd => {
         const opt = document.createElement('option');
         opt.value = fd;
-        opt.textContent = fd.replace('images/', '').replace(/Kaktusi prodajni album - /, '');
+        opt.textContent = fd.replace('images/', '').replace(/Kaktusi-prodajni-album-/, '');
         folderDropdown.appendChild(opt);
     });
 }
